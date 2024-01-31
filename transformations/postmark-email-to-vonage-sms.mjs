@@ -1,0 +1,21 @@
+const toNumber = process.env.TO_NUMBER;
+const fromNumber = process.env.FROM_NUMBER;
+
+const emailToSms = (request, context) => {
+  // Transform the request object then return it.
+  const vonageRequestPayload = {
+    message_type: "text",
+    text: request.body.StrippedTextReply,
+    to: toNumber,
+    from: fromNumber,
+    channel: "sms",
+  };
+
+  request.body = vonageRequestPayload;
+
+  return request;
+};
+
+addHandler("transform", emailToSms);
+
+export default emailToSms;

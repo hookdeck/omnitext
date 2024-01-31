@@ -1,0 +1,22 @@
+{
+  "name": "omni-text",
+  "version": "0.1.0",
+  "description": "",
+  "main": "create-connection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vonage",
+    "sms",
+    "postmark",
+    "email",
+    "omnichannel",
+    "omnitext"
+  ],
+  "author": "phil@leggetter.co.uk",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.1"
+  }
+}
