@@ -1,6 +1,6 @@
 # OmniText
 
-Have conversations across SMS and Email with Vonage and Postmark using Hookdeck as a serverless message router.
+Have conversations across SMS and Email with [Vonage APIs](https://developer.vonage.com?ref=github-omnitext) and [Postmark](https://postmarkapp.com?ref=github-omnitext) using [Hookdeck](https://hookdeck.com?ref=github-omnitext) as a serverless message router.
 
 ## Prerequisites
 
@@ -62,7 +62,7 @@ Set your Vonage webhook URL for your phone number to "https://hkdk.events/{uniqu
 Set your Postmark webhook URL for your inbound stream to "https://hkdk.events/{unique-path}"
 ```
 
-Head to your workspace in Hookdeck and you will see two connections set up as follows:
+Head to your workspace in Hookdeck and you will see two [connections](https://hookdeck.com/docs/connections?ref=github-omnitext) set up as follows:
 
 ![Two connections in the Hookdeck dashboard](docs/omnitext-connections.png)
 
