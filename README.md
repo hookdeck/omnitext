@@ -79,7 +79,7 @@ You can now:
 1. Send an SMS message to the `FROM_NUMBER` (the Vonage phone number) and an email will be sent to the `TO_EMAIL`
 2. Sending an email to the `REPLY_TO_EMAIL` will send an SMS message to the `TO_NUMBER`
 
-With that you have a conversation across SMS and email.
+With that, you have a conversation across SMS and email.
 
 ## Feedback and issues
 
