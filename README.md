@@ -15,7 +15,7 @@ Clone the repo:
 
 ```
 git clone https://github.com/hookdeck/omnitext.git
-&& cd omnitext
+cd omnitext
 ```
 
 Install dependencies:
