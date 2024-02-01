@@ -40,10 +40,10 @@ Update the contents as described below:
 - `VONAGE_API_KEY` and `VONAGE_API_SECRET`: You'll see these credentials at the very top of the Vonage API dashboard home page.
   `POSTMARK_SERVER_API_TOKEN`: From the Postmark dashboard, select your Postmark server and then select **API Tokens**. The token is in the **Server API** section.
 
-Run the `sync.mjs` script to create two connections in Hookdeck to manage the omnichannel and omnidirectional communication between SMS via Vonage and email via Postmark:
+Run the `push.mjs` script to create two connections in Hookdeck to manage the omnichannel and omnidirectional communication between SMS via Vonage and email via Postmark:
 
 ```
-node sync.mjs
+node push.mjs
 ```
 
 The output will be similar to the following:
@@ -66,11 +66,11 @@ Head to your workspace in Hookdeck and you will see two [connections](https://ho
 
 ![Two connections in the Hookdeck dashboard](docs/omnitext-connections.png)
 
-Head to the Vonage Dashboard, select **Numbers** -> **Your Numbers**, and click the pencil icon under the **Manage** column for your Vonage phone number. Set the SMS Inbound Webhook URL to one indicated in the `node sync.mjs` output.
+Head to the Vonage Dashboard, select **Numbers** -> **Your Numbers**, and click the pencil icon under the **Manage** column for your Vonage phone number. Set the SMS Inbound Webhook URL to one indicated in the `node push.mjs` output.
 
 ![Set your Vonage phone number webhook URL](docs/vonage-phone-number-config.png)
 
-Head to your Postmark dashboard, select your Postmark server, select the **Default Inbound Stream** -> **Settings**, and set your **Inbound webhook** to the one indicated in the `node sync.mjs` output.
+Head to your Postmark dashboard, select your Postmark server, select the **Default Inbound Stream** -> **Settings**, and set your **Inbound webhook** to the one indicated in the `node push.mjs` output.
 
 ![Postmark Webhook config](docs/postmark-webhooks-config.png)
 
