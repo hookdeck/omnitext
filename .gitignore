@@ -14,9 +14,3 @@ logs/
 dist/
 build/
 out/
-
-# Ignore package-lock.json for npm
-package-lock.json
-
-# Ignore yarn.lock for Yarn
-yarn.lock
