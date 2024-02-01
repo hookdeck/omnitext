@@ -2,9 +2,10 @@
   "name": "omni-text",
   "version": "0.1.0",
   "description": "",
-  "main": "create-connection.js",
+  "main": "npm run push",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "push": "node src/push.mjs"
   },
   "keywords": [
     "vonage",
@@ -18,5 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.4.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

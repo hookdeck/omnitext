@@ -1,16 +1,18 @@
 import fs from "fs";
+import * as url from "url";
 import dotenv from "dotenv";
 
 dotenv.config();
 
 const syncDate = new Date().toISOString();
+const fileDir = url.fileURLToPath(new URL(".", import.meta.url));
 
 const syncSmsToEmail = async () => {
   console.log("syncing SMS to Email transformation");
 
   const smsToEmailTransformationJs =
     `// Last updated: ${syncDate}\n\n${fs.readFileSync(
-      "./transformations/vonage-sms-to-postmark-email.mjs",
+      `${fileDir}/transformations/vonage-sms-to-postmark-email.mjs`,
       "utf8"
     )}`.replace(/^(export default.*)/m, "// $1");
 
@@ -109,7 +111,7 @@ const syncEmailToSms = async () => {
 
   const emailToSmsTransformationJs =
     `// Last updated: ${syncDate}\n\n${fs.readFileSync(
-      "./transformations/postmark-email-to-vonage-sms.mjs",
+      `${fileDir}/transformations/postmark-email-to-vonage-sms.mjs`,
       "utf8"
     )}`.replace(/^(export default.*)/m, "// $1");
 

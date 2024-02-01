@@ -12,7 +12,7 @@ const smsToEmail = (request, context) => {
     From: fromEmail,
     To: toEmail,
     ReplyTo: replayToEmail,
-    Subject: `Conversation with Phil`,
+    Subject: `Conversation {{topic}}`,
     TextBody: request.body.text,
     // "HtmlBody": "<html><body><strong>Hello</strong> dear Postmark user.</body></html>",
     MessageStream: "outbound",
