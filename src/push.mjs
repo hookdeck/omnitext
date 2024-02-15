@@ -17,12 +17,13 @@ const syncSmsToEmail = async () => {
     )}`.replace(/^(export default.*)/m, "// $1");
 
   const smsToEmailTransformation = {
-    name: "postmark-email-to-vonage-sms",
+    name: "vonage-sms-to-postmark-email",
     code: smsToEmailTransformationJs,
     env: {
       REPLY_TO_EMAIL: process.env.REPLY_TO_EMAIL,
       FROM_EMAIL: process.env.FROM_EMAIL,
       TO_EMAIL: process.env.TO_EMAIL,
+      SUBJECT: process.env.SUBJECT,
     },
   };
 
@@ -116,7 +117,7 @@ const syncEmailToSms = async () => {
     )}`.replace(/^(export default.*)/m, "// $1");
 
   const emailToSmsTransformation = {
-    name: "vonage-sms-to-postmark-email",
+    name: "postmark-email-to-vonage-sms",
     code: emailToSmsTransformationJs,
     env: {
       TO_NUMBER: process.env.TO_NUMBER,
