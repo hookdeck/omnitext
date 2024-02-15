@@ -7,6 +7,7 @@ const resetEnvVars = () => {
   process.env.TO_EMAIL = "to@example.test";
   process.env.TO_NUMBER = "447700900000";
   process.env.FROM_NUMBER = "447700900001";
+  process.env.SUBJECT = "A great conversation!";
 };
 
 beforeEach(resetEnvVars);
@@ -60,7 +61,7 @@ describe("SMS to Email", () => {
 
     expect(transformedRequest.body.TextBody).toEqual(smsTextValue);
     expect(transformedRequest.body.MessageStream).toEqual("outbound");
-    expect(transformedRequest.body.Subject).toEqual("Conversation {{topic}}");
+    expect(transformedRequest.body.Subject).toEqual(process.env.SUBJECT);
     expect(transformedRequest.body.Headers.length).toEqual(1);
   });
 

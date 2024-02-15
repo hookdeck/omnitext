@@ -1,7 +1,8 @@
 const smsToEmail = (request, context) => {
-  const replayToEmail = process.env.REPLY_TO_EMAIL;
+  const replyToEmail = process.env.REPLY_TO_EMAIL;
   const fromEmail = process.env.FROM_EMAIL;
   const toEmail = process.env.TO_EMAIL;
+  const subject = process.env.SUBJECT;
 
   const domain = toEmail ? toEmail.replace(/.*@/, "") : "example.com";
   const conversationId = `<omnitext/conversation/1@${domain}>`;
@@ -9,8 +10,8 @@ const smsToEmail = (request, context) => {
   const postmarkSendEmailRequest = {
     From: fromEmail,
     To: toEmail,
-    ReplyTo: replayToEmail,
-    Subject: `Conversation {{topic}}`,
+    ReplyTo: replyToEmail,
+    Subject: subject,
     TextBody: request.body.text,
     MessageStream: "outbound",
 
