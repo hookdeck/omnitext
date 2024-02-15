@@ -1,6 +1,6 @@
 # OmniText
 
-Have conversations across SMS and Email with [Vonage APIs](https://developer.vonage.com?ref=github-omnitext) and [Postmark](https://postmarkapp.com?ref=github-omnitext) using [Hookdeck](https://hookdeck.com?ref=github-omnitext) as a serverless message router.
+Have conversations across SMS and Email with [Vonage APIs](https://developer.vonage.com?ref=github-omnitext) and [Postmark](https://postmarkapp.com?ref=github-omnitext), using [Hookdeck](https://hookdeck.com?ref=github-omnitext) as a serverless message router.
 
 ## Prerequisites
 
