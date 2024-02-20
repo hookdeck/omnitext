@@ -23,21 +23,10 @@ const smsToEmail = (request, context) => {
         Name: "Message-ID",
         Value: conversationId,
       },
-      // Removing these appears to resolve the out of order email threading problem
-      // {
-      //   Name: "In-Reply-To",
-      //   Value: conversationId,
-      // },
-      // // References should be a comma separated list of previous messages
-      // {
-      //   Name: "References",
-      //   Value: conversationId,
-      // },
     ],
   };
 
   request.body = postmarkSendEmailRequest;
-  request.headers["content-type"] = "application/json";
 
   return request;
 };
