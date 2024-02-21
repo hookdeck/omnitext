@@ -4,7 +4,7 @@ const emailToSms = (request, context) => {
 
   const vonageRequestPayload = {
     message_type: "text",
-    text: request.body.StrippedTextReply,
+    text: request.body.StrippedTextReply || request.body.TextBody,
     to: toNumber,
     from: fromNumber,
     channel: "sms",
